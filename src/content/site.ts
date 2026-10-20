@@ -13,11 +13,25 @@ export const profile = {
 export const internship = {
   company: "Iqraa Mark Private Limited",
   role: "Data Analytics Intern",
-  location: "Kozhikode, Kerala",
+  location: "Kozhikode, Kerala, India",
   // Add your actual dates, e.g. "Jan 2026 – Apr 2026"
   dates: "",
-  // Add verified responsibilities only.
-  responsibilities: [] as string[],
+  project: {
+    title: "Premium Membership and Subscription Strategy for Iqraa Mark",
+    to: "/projects/iqraa-mark-membership",
+  },
+  // Verified internship activities, presented as research, analysis and recommendations.
+  responsibilities: [
+    "Conducted competitor research and market analysis of comparable membership offerings.",
+    "Performed customer segmentation and membership tier research.",
+    "Researched subscription pricing strategy, including willingness-to-pay analysis.",
+    "Prepared revenue forecasts and business feasibility research for the proposed membership model.",
+    "Identified KPIs and defined how performance would be measured for the programme.",
+    "Developed strategic recommendations for membership growth and retention.",
+  ],
+  // Honest scope note — do not claim implementation in the company's live platform or real revenue.
+  scopeNote:
+    "This work was delivered as research, analysis and recommendations. The strategy was not implemented on the company's live platform, and no revenue or business impact is claimed.",
 };
 
 export const skills = [
