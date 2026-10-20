@@ -137,5 +137,6 @@
 @keyframes trace { to { stroke-dashoffset: 0; } }
 @media (max-width: 767px) {
   .hero-name { font-size: 72px; }
-  .hero-art { width: 420px; right: -180px; top: 180px; opacity: .16; }
+  .hero-art { width: 420px; right: -180px; top: 180px; opacity: .08; }
+  .hero-art .analytics-text { display: none; }
 }
