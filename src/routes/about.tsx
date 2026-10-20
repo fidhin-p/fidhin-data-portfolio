@@ -40,6 +40,7 @@ function About() {
             <div className="font-mono text-sm text-muted-foreground sm:text-right">
               <p>Internship</p>
               <p>{internship.dates || "Dates to be added"}</p>
+              <p className="mt-1 text-xs">{internship.certificateRef}</p>
             </div>
           </div>
 
