@@ -11,8 +11,8 @@ export const profile = {
   // Replace with your real profile URLs (leave "" to show "Coming soon").
   linkedin: "",
   github: "",
-  // Put your resume PDF at public/resume.pdf
-  resumeUrl: "/resume.pdf",
+  // Connect the actual uploaded PDF; an empty URL keeps resume controls unavailable.
+  resumeUrl: "",
   // Availability line shown on the homepage.
   availability: "Open to Entry-Level Data Analyst Opportunities Worldwide",
 };
@@ -52,10 +52,10 @@ export const skills = [
 
 // Add real screenshots to src/assets and set `image` when available.
 export const showcase = [
-  { title: "Power BI Dashboards", tag: "Business Intelligence", image: "" },
-  { title: "Excel Analysis", tag: "Spreadsheet Analytics", image: "" },
-  { title: "SQL Projects", tag: "Data Querying", image: "" },
-  { title: "Business Research", tag: "Market & Strategy", image: "" },
+  { title: "Power BI Dashboards", tag: "Power BI", image: "", url: "", description: "Dashboard project to be added.", objective: "Reporting objective to be added with the real project." },
+  { title: "Excel Analysis", tag: "Excel", image: "", url: "", description: "Spreadsheet analysis to be added.", objective: "Analysis objective to be added with the real project." },
+  { title: "SQL Projects", tag: "SQL", image: "", url: "", description: "Querying project to be added.", objective: "Research question to be added with the real project." },
+  { title: "Tableau Visualizations", tag: "Tableau", image: "", url: "", description: "Visual analytics project to be added.", objective: "Visualization objective to be added with the real project." },
 ];
 
 // Original certificate scans, shown unaltered. Titles, issuers and dates are the

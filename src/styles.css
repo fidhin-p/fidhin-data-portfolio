@@ -40,14 +40,14 @@
 }
 
 :root {
-  --radius: 0.875rem;
-  --background: oklch(0.13 0.005 270);
-  --foreground: oklch(0.95 0.01 270);
-  --card: oklch(0.18 0.008 270);
+  --radius: 0.5rem;
+  --background: oklch(0.125 0.002 270);
+  --foreground: oklch(0.95 0.005 270);
+  --card: oklch(0.17 0.003 270);
   --card-foreground: oklch(0.95 0.01 270);
   --popover: oklch(0.18 0.008 270);
   --popover-foreground: oklch(0.95 0.01 270);
-  --primary: oklch(0.68 0.17 285);
+  --primary: oklch(0.88 0.16 125);
   --primary-foreground: oklch(0.13 0.005 270);
   --secondary: oklch(0.22 0.01 270);
   --secondary-foreground: oklch(0.95 0.01 270);
@@ -59,15 +59,15 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(1 0 0 / 9%);
   --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.68 0.17 285);
+  --ring: var(--primary);
   --violet: oklch(0.68 0.17 285);
   --azure: oklch(0.7 0.14 245);
   --research: oklch(0.72 0.13 230);
   --proposal: oklch(0.72 0.16 300);
   --implemented: oklch(0.75 0.15 160);
-  --gradient-brand: linear-gradient(120deg, var(--violet), var(--azure));
-  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--violet) 35%, transparent),
-    0 10px 40px -10px color-mix(in oklab, var(--violet) 45%, transparent);
+  --gradient-brand: linear-gradient(120deg, var(--primary), var(--implemented));
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--primary) 20%, transparent),
+    0 12px 40px -20px color-mix(in oklab, var(--primary) 15%, transparent);
 }
 
 @layer base {
@@ -77,12 +77,10 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    background-image:
-      radial-gradient(60rem 30rem at 85% -10%, color-mix(in oklab, var(--violet) 14%, transparent), transparent 60%),
-      radial-gradient(50rem 30rem at -10% 20%, color-mix(in oklab, var(--azure) 10%, transparent), transparent 60%);
-    background-attachment: fixed;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0; }
+  ::selection { background: var(--primary); color: var(--background); }
+  button, a { -webkit-tap-highlight-color: transparent; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -105,12 +103,12 @@
 
 @utility glow-card {
   position: relative;
-  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), var(--card));
+  background: var(--card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius);
   transition: border-color .3s, box-shadow .3s, transform .3s;
   &:hover {
-    border-color: color-mix(in oklab, var(--violet) 45%, transparent);
+    border-color: color-mix(in oklab, var(--primary) 35%, transparent);
     box-shadow: var(--shadow-glow);
     transform: translateY(-2px);
   }
@@ -126,3 +124,19 @@
 
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 @utility animate-rise { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+
+.hero-name { font-size: 112px; line-height: 1.05; }
+.analytics-scene { width: 100%; height: auto; color: var(--primary); }
+.analytics-grid { stroke: var(--border); }
+.analytics-secondary { stroke: var(--azure); }
+.analytics-muted { stroke: var(--muted-foreground); }
+.analytics-text { fill: var(--muted-foreground); font-family: var(--font-mono); font-size: 11px; }
+.signal-path { stroke-dasharray: 900; stroke-dashoffset: 900; animation: trace 2.5s ease forwards; }
+.hero-art { position: absolute; width: 620px; right: -20px; top: 125px; opacity: .5; pointer-events: none; }
+.hero-surface { background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 80px 80px; }
+@keyframes trace { to { stroke-dashoffset: 0; } }
+@media (max-width: 767px) {
+  .hero-name { font-size: 72px; }
+  .hero-art { width: 420px; right: -180px; top: 180px; opacity: .08; }
+  .hero-art .analytics-text { display: none; }
+}
