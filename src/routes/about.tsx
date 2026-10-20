@@ -34,21 +34,31 @@ function About() {
             <div>
               <h3 className="text-xl font-semibold">{internship.role}</h3>
               <p className="text-azure">{internship.company}</p>
+              <p className="text-sm text-muted-foreground">{internship.location}</p>
             </div>
             <div className="font-mono text-sm text-muted-foreground sm:text-right">
-              <p>{internship.location}</p>
+              <p>Internship</p>
               <p>{internship.dates || "Dates to be added"}</p>
             </div>
           </div>
+
           <div className="mt-6 border-t pt-6">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Responsibilities</h4>
-            {internship.responsibilities.length ? (
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-muted-foreground">
-                {internship.responsibilities.map((r) => <li key={r}>{r}</li>)}
-              </ul>
-            ) : (
-              <p className="mt-3 text-sm italic text-muted-foreground">Verified responsibilities will be added here.</p>
-            )}
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Project</h4>
+            <Link to={internship.project.to} className="mt-2 inline-block text-lg font-medium hover:text-azure">
+              {internship.project.title} →
+            </Link>
+          </div>
+
+          <div className="mt-6 border-t pt-6">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Research & analysis activities</h4>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-muted-foreground">
+              {internship.responsibilities.map((r) => <li key={r}>{r}</li>)}
+            </ul>
+          </div>
+
+          <div className="mt-6 border-t pt-6">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Scope</h4>
+            <p className="mt-3 text-sm italic text-muted-foreground">{internship.scopeNote}</p>
           </div>
         </article>
       </Section>
