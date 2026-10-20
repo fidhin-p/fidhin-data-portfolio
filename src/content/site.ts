@@ -21,8 +21,10 @@ export const internship = {
   company: "Iqraa Mark Private Limited",
   role: "Data Analytics Intern",
   location: "Kozhikode, Kerala, India",
-  // Add your actual dates, e.g. "Jan 2026 – Apr 2026"
-  dates: "",
+  // Taken from the Certificate of Live Project Experience (Iqraamark Pvt. Ltd.).
+  dates: "06-07-2026 – 06-10-2026",
+  // Verbatim reference printed on the certificate.
+  certificateRef: "Live Project Experience · Certificate ID IQM-DAT-2026-34 · Issued 19-10-2026",
   project: {
     title: "Premium Membership and Subscription Strategy for Iqraa Mark",
     to: "/projects/iqraa-mark-membership",
