@@ -10,9 +10,9 @@ export function viewLabel(title: string) {
 export function CertificationsSection() {
   return (
     <Section eyebrow="Credentials" title="Certifications">
-      <div className="grid items-start gap-6 md:grid-cols-2">
+      <div className="columns-1 gap-6 md:columns-2">
         {certificates.map((c) => (
-          <article key={c.id} className="glow-card flex h-full flex-col p-5">
+          <article key={c.id} className="glow-card mb-6 flex break-inside-avoid flex-col p-5">
             <div className="overflow-hidden rounded-lg border bg-background/60">
               <img
                 src={c.image}
