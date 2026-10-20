@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, seo } from "@/components/site";
 import { internship, skills } from "@/content/site";
 
