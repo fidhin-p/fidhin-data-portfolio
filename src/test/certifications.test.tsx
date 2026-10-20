@@ -25,8 +25,9 @@ describe("Certifications section", () => {
     }
   });
 
-  it("keeps the availability line open to roles outside India", () => {
-    expect(profile.availability).toMatch(/India/i);
-    expect(profile.availability).toMatch(/internationally/i);
+  it("shows the worldwide availability line, never an India-only one", () => {
+    expect(profile.availability).toBe("Open to Entry-Level Data Analyst Opportunities Worldwide");
+    expect(profile.availability).toMatch(/worldwide/i);
+    expect(profile.availability).not.toMatch(/india-only|only in india/i);
   });
 });
