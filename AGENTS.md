@@ -11,4 +11,8 @@
 
 ## Rules
 
+- Shared portfolio sections and analytics schematics live in reusable components; content records stay separate from presentation. Why: the homepage and dedicated pages must remain consistent as real assets arrive.
+- A missing resume or project URL renders an unavailable control, never a fake download or completed project. Why: visitors must not encounter fabricated work or broken asset links.
+- Case-study frameworks are explicitly proposed and have no invented numeric series; actual findings require supplied evidence. Why: research scope must remain distinct from measured performance.
+
 - Credential images are the original uploaded scans, served through Lovable Assets pointer files in `src/assets`; render them at their natural aspect ratio (never `object-cover`, fixed crops, or AI redraws) and open the full file in a new tab. Why: they are official documents and the portfolio must not misrepresent them.
