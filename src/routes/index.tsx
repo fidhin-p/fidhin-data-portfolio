@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, btnPrimary, ResumeButton, seo } from "@/components/site";
-import { skills } from "@/content/site";
+import { profile, skills } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => seo("Fidhin — Aspiring Data Analyst", "Data analytics, visualisation and business research portfolio of Fidhin."),
@@ -14,7 +14,7 @@ function Index() {
         <div className="grid-bg absolute inset-0 -z-10" aria-hidden />
         <div className="mx-auto max-w-6xl px-5 pb-20 pt-24 sm:pt-32">
           <p className="animate-rise inline-flex items-center gap-2 rounded-full border px-3 py-1 font-mono text-xs text-muted-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-implemented" /> Open to entry-level roles in India
+            <span className="h-1.5 w-1.5 rounded-full bg-implemented" /> {profile.availability}
           </p>
           <h1 className="animate-rise mt-6 text-5xl font-semibold sm:text-7xl" style={{ animationDelay: ".08s" }}>
             Hi, I'm <span className="text-gradient">Fidhin.</span>

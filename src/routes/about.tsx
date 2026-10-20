@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, seo } from "@/components/site";
+import { CertificationsSection } from "@/components/certificates";
 import { internship, skills } from "@/content/site";
 
 export const Route = createFileRoute("/about")({
@@ -12,7 +13,7 @@ function About() {
     <>
       <Section eyebrow="About me" title="Turning data into decisions">
         <div className="max-w-3xl space-y-4 text-lg text-muted-foreground">
-          <p>I'm Fidhin, an aspiring Data Analyst pursuing entry-level analytics opportunities in India.</p>
+          <p>I'm Fidhin, an aspiring Data Analyst pursuing entry-level analytics opportunities in India and internationally.</p>
           <p>My interest lies where data analytics meets business research — cleaning and analysing data, building clear visualisations, and researching markets to help teams make better-informed decisions.</p>
         </div>
       </Section>
@@ -62,6 +63,8 @@ function About() {
           </div>
         </article>
       </Section>
+
+      <CertificationsSection />
     </>
   );
 }
