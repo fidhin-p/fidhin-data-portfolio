@@ -14,7 +14,7 @@ export const profile = {
   // Put your resume PDF at public/resume.pdf
   resumeUrl: "/resume.pdf",
   // Availability line shown on the homepage.
-  availability: "Open to entry-level roles in India and internationally",
+  availability: "Open to Entry-Level Data Analyst Opportunities Worldwide",
 };
 
 export const internship = {
